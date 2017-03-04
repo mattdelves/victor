@@ -12,7 +12,7 @@ public class Rect: Node {
     public var name: String
     public var attributes: [String : String]
     public var children: [Node]
-    public var parent: Node?
+    public weak var parent: Node?
 
     public var width: String = ""
     public var height: String = ""

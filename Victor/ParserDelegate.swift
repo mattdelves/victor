@@ -39,6 +39,14 @@ final public class ParserDelegate: NSObject, XMLParserDelegate {
             newNode = Group(attributes: attributeDict, children: [], name: elementName, parent: parent)
         case .rect:
             newNode = Rect(attributes: attributeDict, children: [], name: elementName, parent: parent)
+        case .path:
+            newNode = Path(attributes: attributeDict, children: [], name: elementName, parent: parent)
+        case .polygon:
+            newNode = Polygon(attributes: attributeDict, children: [], name: elementName, parent: parent)
+        case .mask:
+            newNode = Mask(attributes: attributeDict, children: [], name: elementName, parent: parent)
+        case .defs:
+            newNode = Defs(attributes: attributeDict, children: [], name: elementName, parent: parent)
         }
 
         if let node = newNode {

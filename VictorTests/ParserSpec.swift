@@ -53,5 +53,45 @@ final class ParserSpec: QuickSpec {
                 expect(document.children.count) == 3
             }
         }
+        describe("riko") {
+            let filePath = Bundle(for: type(of: self)).path(forResource: "riko", ofType: "svg")!
+            let parser = Parser(file: "file://\(filePath)")
+            let document = parser.parse()!
+            context("defs") {
+                it("has 1 defs element") {
+                    let defs = document.children.filter { $0 is Defs }
+                    expect(defs.count) == 1
+                }
+            }
+            context("polygons") {
+                it("has 1 polygon element") {
+                    let polygons = document.children.filter { $0 is Polygon }
+                    expect(polygons.count) == 1
+                }
+            }
+            context("path") {
+                it("has 32 path elements") {
+                    let paths = document.children.filter { $0 is Path }
+                    expect(paths.count) == 32
+                }
+            }
+            context("groups") {
+                let groups = document.children.filter { $0 is Group }
+                let group = groups.first as! Group
+
+                it("has 1 group element") {
+                    expect(groups.count) == 1
+                }
+                it("the group has a mask") {
+                    let innerGroup = group.children.filter { $0 is Group }.first as! Group
+                    let masks = innerGroup.children.filter { $0 is Mask }
+                    expect(masks.count) == 1
+                }
+                it("has path elements") {
+                    let paths = group.children.filter { $0 is Path }
+                    expect(paths.count) == 13
+                }
+            }
+        }
     }
 }
