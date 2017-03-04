@@ -1,5 +1,5 @@
 //
-//  Group.swift
+//  Polygon.swift
 //  Victor
 //
 //  Created by Matthew Delves on 4/3/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Group: Node {
+final public class Polygon: Node {
     public var attributes: [String : String]
     public var children: [Node]
     public var name: String
@@ -16,13 +16,11 @@ public class Group: Node {
 
     public enum Attributes: String {
         case id
-        case fill
-        case transform
+        case points
     }
 
     public var id: String = ""
-    public var fill: String = ""
-    public var transform: String = ""
+    public var points: String = ""
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes
@@ -34,12 +32,8 @@ public class Group: Node {
             self.id = id
         }
 
-        if let fill = attributes[Attributes.fill.rawValue] {
-            self.fill = fill
-        }
-
-        if let transform = attributes[Attributes.transform.rawValue] {
-            self.transform = transform
+        if let points = attributes[Attributes.points.rawValue] {
+            self.points = points
         }
     }
 }
