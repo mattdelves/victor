@@ -17,7 +17,7 @@ public struct SVG: Node {
     public var width: String
     public var height: String
 
-    init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
+    public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes
         self.children = children
         self.name = name
