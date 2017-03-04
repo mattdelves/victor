@@ -34,7 +34,7 @@ final public class ParserDelegate: NSObject, XMLParserDelegate {
             rootNode = SVG(attributes: attributeDict, children: [], name: elementName, parent: nil)
         case .rect:
             if currentNode == nil {
-                let rect = Rect(name: elementName, attributes: attributeDict, children: [], parent: rootNode)
+                let rect = Rect(attributes: attributeDict, children: [], name: elementName, parent: rootNode)
                 rootNode?.children.append(rect)
                 currentNode = rect
             }
