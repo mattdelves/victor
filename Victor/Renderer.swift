@@ -172,6 +172,8 @@ public final class Renderer {
             render(element: group)
         } else if let path = element as? Path {
             render(element: path)
+        } else if let polygon = element as? Polygon {
+            render(element: polygon)
         } else {
             element.children.forEach({render(element: $0)})
         }
@@ -185,7 +187,17 @@ public final class Renderer {
     }
 
     private func render(element: Polygon) {
-
+        var points = element.points.components(separatedBy: " ")
+        let path = UIBezierPath()
+        path.move(to: .zero)
+        repeat {
+            let point = CGPoint(x: CGFloat(points[0].doubleValue ?? 0), y: CGFloat(points[1].doubleValue ?? 0))
+            path.addLine(to: point)
+            points.removeFirst(2)
+        } while !points.isEmpty
+        (element.fill.colorValue ?? .clear).setFill()
+        path.usesEvenOddFillRule = (element.fillRule == "evenodde" ? true : false)
+        path.fill()
     }
 
     private func render(element: Path) {
