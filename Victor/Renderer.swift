@@ -51,7 +51,7 @@ extension String {
                 case Character("C"):
                     let curve = commands[0...2]
                     let points = curve.flatMap({$0.pointValue})
-                    path.addCurve(to: points[0], controlPoint1: points[1], controlPoint2: points[2])
+                    path.addCurve(to: points[2], controlPoint1: points[0], controlPoint2: points[1])
                     commands.removeFirst(3)
                 default:
                     _ = commands.removeFirst()
@@ -181,9 +181,9 @@ public final class Renderer {
 
     private func render(element: Group) {
         let transform = element.transform.affineTransformValue
-        context?.concatenate(transform)
+        let current = context?.ctm ?? .identity
         element.children.forEach({render(element: $0)})
-        context?.concatenate(.identity)
+        context?.concatenate(current)
     }
 
     private func render(element: Polygon) {
