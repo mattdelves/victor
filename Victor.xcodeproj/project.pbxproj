@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C95FA1321E6A41E1005ED369 /* Victor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1281E6A41E1005ED369 /* Victor.framework */; };
-		C95FA1371E6A41E1005ED369 /* VictorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1361E6A41E1005ED369 /* VictorTests.swift */; };
 		C95FA1391E6A41E1005ED369 /* Victor.h in Headers */ = {isa = PBXBuildFile; fileRef = C95FA12B1E6A41E1005ED369 /* Victor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C95FA1471E6A4586005ED369 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1431E6A457C005ED369 /* Nimble.framework */; };
 		C95FA1481E6A4586005ED369 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1441E6A457C005ED369 /* Quick.framework */; };
@@ -20,6 +19,7 @@
 		C95FA1541E6A49F5005ED369 /* simple_rect.svg in Resources */ = {isa = PBXBuildFile; fileRef = C95FA1531E6A49F5005ED369 /* simple_rect.svg */; };
 		C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */; };
 		C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15B1E6A51A8005ED369 /* Node.swift */; };
+		C95FA15E1E6A5AA0005ED369 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15D1E6A5AA0005ED369 /* Rect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		C95FA12B1E6A41E1005ED369 /* Victor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Victor.h; sourceTree = "<group>"; };
 		C95FA12C1E6A41E1005ED369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C95FA1311E6A41E1005ED369 /* VictorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VictorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C95FA1361E6A41E1005ED369 /* VictorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictorTests.swift; sourceTree = "<group>"; };
 		C95FA1381E6A41E1005ED369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C95FA1431E6A457C005ED369 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C95FA1441E6A457C005ED369 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		C95FA1531E6A49F5005ED369 /* simple_rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = simple_rect.svg; path = fixtures/simple_rect.svg; sourceTree = SOURCE_ROOT; };
 		C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserDelegate.swift; sourceTree = "<group>"; };
 		C95FA15B1E6A51A8005ED369 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		C95FA15D1E6A5AA0005ED369 /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,7 @@
 				C95FA1501E6A48EA005ED369 /* SVG.swift */,
 				C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */,
 				C95FA15B1E6A51A8005ED369 /* Node.swift */,
+				C95FA15D1E6A5AA0005ED369 /* Rect.swift */,
 			);
 			path = Victor;
 			sourceTree = "<group>";
@@ -120,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				C95FA1521E6A49CD005ED369 /* fixtures */,
-				C95FA1361E6A41E1005ED369 /* VictorTests.swift */,
 				C95FA1381E6A41E1005ED369 /* Info.plist */,
 				C95FA14E1E6A47D3005ED369 /* ParserSpec.swift */,
 			);
@@ -262,6 +262,7 @@
 				C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */,
 				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
 				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
+				C95FA15E1E6A5AA0005ED369 /* Rect.swift in Sources */,
 				C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95FA1371E6A41E1005ED369 /* VictorTests.swift in Sources */,
 				C95FA14F1E6A47D3005ED369 /* ParserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

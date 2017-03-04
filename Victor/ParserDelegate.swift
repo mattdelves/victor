@@ -10,6 +10,7 @@ import Foundation
 
 final public class ParserDelegate: NSObject, XMLParserDelegate {
     var rootNode: Node?
+    var currentNode: Node?
 
     public func parserDidStartDocument(_ parser: XMLParser) {
         //
@@ -30,13 +31,18 @@ final public class ParserDelegate: NSObject, XMLParserDelegate {
 
         switch type {
         case .svg:
-            rootNode = SVG(attributes: attributeDict, children: [], name: elementName)
-        default:
-            break
+            rootNode = SVG(attributes: attributeDict, children: [], name: elementName, parent: nil)
+        case .rect:
+            if currentNode == nil {
+                let rect = Rect(name: elementName, attributes: attributeDict, children: [], parent: rootNode)
+                rootNode?.children.append(rect)
+                currentNode = rect
+            }
         }
     }
 
     public func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         // end
+        currentNode = nil
     }
 }

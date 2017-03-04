@@ -20,10 +20,14 @@ final class ParserSpec: QuickSpec {
             }
         }
         context("parsing") {
+            let filePath = Bundle(for: type(of: self)).path(forResource: "simple_rect", ofType: "svg")!
+            let parser = Parser(file: "file://\(filePath)")
+
             it("returns SVG document") {
-                let filePath = Bundle(for: type(of: self)).path(forResource: "simple_rect", ofType: "svg")!
-                let parser = Parser(file: "file://\(filePath)")
                 expect(parser.parse()).notTo(beNil())
+            }
+            it("has some children") {
+                expect(parser.parse()?.children.count) == 5
             }
         }
     }

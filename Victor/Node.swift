@@ -12,6 +12,7 @@ public protocol Node {
     var name: String { get set }
     var attributes: [String: String] { get set }
     var children: [Node] { get set }
+    var parent: Node? { get set }
 }
 
 public enum NodeType: String {
