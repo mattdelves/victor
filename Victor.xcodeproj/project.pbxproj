@@ -21,6 +21,7 @@
 		C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15B1E6A51A8005ED369 /* Node.swift */; };
 		C95FA15E1E6A5AA0005ED369 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15D1E6A5AA0005ED369 /* Rect.swift */; };
 		C95FA1601E6A5E48005ED369 /* SVGSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15F1E6A5E48005ED369 /* SVGSpec.swift */; };
+		C95FA1621E6A5F48005ED369 /* RectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1611E6A5F48005ED369 /* RectSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C95FA15B1E6A51A8005ED369 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		C95FA15D1E6A5AA0005ED369 /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
 		C95FA15F1E6A5E48005ED369 /* SVGSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGSpec.swift; sourceTree = "<group>"; };
+		C95FA1611E6A5F48005ED369 /* RectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				C95FA1381E6A41E1005ED369 /* Info.plist */,
 				C95FA14E1E6A47D3005ED369 /* ParserSpec.swift */,
 				C95FA15F1E6A5E48005ED369 /* SVGSpec.swift */,
+				C95FA1611E6A5F48005ED369 /* RectSpec.swift */,
 			);
 			path = VictorTests;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95FA1621E6A5F48005ED369 /* RectSpec.swift in Sources */,
 				C95FA14F1E6A47D3005ED369 /* ParserSpec.swift in Sources */,
 				C95FA1601E6A5E48005ED369 /* SVGSpec.swift in Sources */,
 			);
