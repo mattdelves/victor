@@ -12,7 +12,7 @@ final public class Path: Node {
     public var attributes: [String : String]
     public var name: String
     public var children: [Node]
-    public var parent: Node?
+    public weak var parent: Node?
 
     public enum Attributes: String {
         case data = "d"

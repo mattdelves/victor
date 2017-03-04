@@ -12,7 +12,7 @@ final public class Defs: Node {
     public var attributes: [String : String]
     public var children: [Node]
     public var name: String
-    public var parent: Node?
+    public weak var parent: Node?
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes

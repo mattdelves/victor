@@ -13,7 +13,7 @@ final public class Mask: Node {
     public var attributes: [String : String]
     public var children: [Node]
     public var name: String
-    public var parent: Node?
+    public weak var parent: Node?
 
     public enum Attributes: String {
         case id
