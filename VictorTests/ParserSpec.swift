@@ -53,5 +53,10 @@ final class ParserSpec: QuickSpec {
                 expect(document.children.count) == 3
             }
         }
+        context("riko") {
+            let filePath = Bundle(for: type(of: self)).path(forResource: "riko", ofType: "svg")!
+            let parser = Parser(file: "file://\(filePath)")
+            let document = parser.parse()!
+        }
     }
 }

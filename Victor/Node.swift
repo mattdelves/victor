@@ -19,4 +19,5 @@ public enum NodeType: String {
     case svg
     case rect
     case group = "g"
+    case path
 }
