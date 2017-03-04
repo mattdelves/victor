@@ -22,4 +22,5 @@ public enum NodeType: String {
     case path
     case polygon
     case mask
+    case defs
 }

@@ -45,6 +45,8 @@ final public class ParserDelegate: NSObject, XMLParserDelegate {
             newNode = Polygon(attributes: attributeDict, children: [], name: elementName, parent: parent)
         case .mask:
             newNode = Mask(attributes: attributeDict, children: [], name: elementName, parent: parent)
+        case .defs:
+            newNode = Defs(attributes: attributeDict, children: [], name: elementName, parent: parent)
         }
 
         if let node = newNode {

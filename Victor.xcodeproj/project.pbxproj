@@ -33,6 +33,7 @@
 		C95FA1741E6A8F5B005ED369 /* PolygonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1731E6A8F5B005ED369 /* PolygonSpec.swift */; };
 		C95FA1761E6A9097005ED369 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1751E6A9097005ED369 /* Mask.swift */; };
 		C95FA1781E6A9154005ED369 /* MaskSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1771E6A9154005ED369 /* MaskSpec.swift */; };
+		C95FA17A1E6A945A005ED369 /* Defs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1791E6A945A005ED369 /* Defs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		C95FA1731E6A8F5B005ED369 /* PolygonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonSpec.swift; sourceTree = "<group>"; };
 		C95FA1751E6A9097005ED369 /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
 		C95FA1771E6A9154005ED369 /* MaskSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskSpec.swift; sourceTree = "<group>"; };
+		C95FA1791E6A945A005ED369 /* Defs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				C95FA16D1E6A88E6005ED369 /* Path.swift */,
 				C95FA1711E6A8DCE005ED369 /* Polygon.swift */,
 				C95FA1751E6A9097005ED369 /* Mask.swift */,
+				C95FA1791E6A945A005ED369 /* Defs.swift */,
 			);
 			path = Victor;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
 				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
 				C95FA1641E6A634D005ED369 /* Group.swift in Sources */,
+				C95FA17A1E6A945A005ED369 /* Defs.swift in Sources */,
 				C95FA15E1E6A5AA0005ED369 /* Rect.swift in Sources */,
 				C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */,
 			);
