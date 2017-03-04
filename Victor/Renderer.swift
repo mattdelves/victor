@@ -182,6 +182,7 @@ public final class Renderer {
     private func render(element: Group) {
         let transform = element.transform.affineTransformValue
         let current = context?.ctm ?? .identity
+        context?.concatenate(transform)
         element.children.forEach({render(element: $0)})
         context?.concatenate(current)
     }
