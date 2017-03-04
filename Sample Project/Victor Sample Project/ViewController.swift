@@ -13,7 +13,7 @@ import QuickLook
 class ViewController: UIViewController {
 
     @IBOutlet weak var canvasImageView: UIImageView!
-    private let parser = Parser(file: "\(Bundle.main.url(forResource: "rect02", withExtension: "svg")!)")
+    private let parser = Parser(file: "\(Bundle.main.url(forResource: "riko", withExtension: "svg")!)")
 
     fileprivate var pdfURL: URL? {
         get {

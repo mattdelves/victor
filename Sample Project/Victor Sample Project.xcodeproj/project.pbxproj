@@ -14,6 +14,7 @@
 		141615321E6A5D96008230C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141615301E6A5D96008230C3 /* LaunchScreen.storyboard */; };
 		141615421E6A5F01008230C3 /* Victor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1416153F1E6A5EF4008230C3 /* Victor.framework */; };
 		141615441E6A5FC8008230C3 /* rect02.svg in Resources */ = {isa = PBXBuildFile; fileRef = 141615431E6A5FC8008230C3 /* rect02.svg */; };
+		1416154B1E6AA0B0008230C3 /* riko.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1416154A1E6AA0B0008230C3 /* riko.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		141615331E6A5D96008230C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141615391E6A5EF4008230C3 /* Victor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Victor.xcodeproj; path = ../Victor.xcodeproj; sourceTree = "<group>"; };
 		141615431E6A5FC8008230C3 /* rect02.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = rect02.svg; sourceTree = "<group>"; };
+		1416154A1E6AA0B0008230C3 /* riko.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = riko.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		141615451E6A5FCC008230C3 /* SVGs */ = {
 			isa = PBXGroup;
 			children = (
+				1416154A1E6AA0B0008230C3 /* riko.svg */,
 				141615431E6A5FC8008230C3 /* rect02.svg */,
 			);
 			name = SVGs;
@@ -189,6 +192,7 @@
 			files = (
 				141615441E6A5FC8008230C3 /* rect02.svg in Resources */,
 				141615321E6A5D96008230C3 /* LaunchScreen.storyboard in Resources */,
+				1416154B1E6AA0B0008230C3 /* riko.svg in Resources */,
 				1416152F1E6A5D96008230C3 /* Assets.xcassets in Resources */,
 				1416152D1E6A5D96008230C3 /* Main.storyboard in Resources */,
 			);
