@@ -20,6 +20,7 @@ final public class Path: Node {
         case id
         case fillRule = "fill-rule"
         case stroke
+        case mask
     }
 
     public var data: String = ""
@@ -27,6 +28,7 @@ final public class Path: Node {
     public var id: String = ""
     public var fillRule: String = ""
     public var stroke: String = ""
+    public var mask: String = ""
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes
@@ -52,6 +54,10 @@ final public class Path: Node {
 
         if let stroke = attributes[Attributes.stroke.rawValue] {
             self.stroke = stroke
+        }
+
+        if let mask = attributes[Attributes.mask.rawValue] {
+            self.mask = mask
         }
     }
 }

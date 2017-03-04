@@ -20,7 +20,8 @@ final class PathSpec: QuickSpec {
                     "id": "Fill-1",
                     "stroke": "none",
                     "fill": "#FFFFFF",
-                    "fill-rule": "evenodd"
+                    "fill-rule": "evenodd",
+                    "mask": "url(#mask-2)"
                 ],
                 children: [],
                 name: "path",
@@ -40,6 +41,9 @@ final class PathSpec: QuickSpec {
             }
             it("sets the fill rule") {
                 expect(path.fillRule) == "evenodd"
+            }
+            it("sets the mask") {
+                expect(path.mask) == "url(#mask-2)"
             }
         }
     }
