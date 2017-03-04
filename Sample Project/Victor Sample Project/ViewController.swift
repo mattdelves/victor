@@ -30,8 +30,8 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         if let svg = parser.parse(), let pdfURL = pdfURL {
-            let image = Renderer.render(svg) // PDF data actually
-            try! image.write(to: pdfURL)
+            let pdfData = Renderer().render(svg)
+            try! pdfData.write(to: pdfURL)
             let quickLook = QLPreviewController()
             quickLook.dataSource = self
             present(quickLook, animated: true, completion: nil)
