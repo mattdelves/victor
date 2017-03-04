@@ -18,4 +18,5 @@ public protocol Node {
 public enum NodeType: String {
     case svg
     case rect
+    case group = "g"
 }
