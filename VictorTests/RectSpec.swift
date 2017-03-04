@@ -19,7 +19,10 @@ final class RectSpec: QuickSpec {
                     "width": "2cm",
                     "height": "5cm",
                     "x": "12",
-                    "y": "15"
+                    "y": "15",
+                    "fill": "none",
+                    "stroke": "purple",
+                    "stroke-width": "2cm"
                 ],
                 children: [],
                 name: "rect",
@@ -36,6 +39,15 @@ final class RectSpec: QuickSpec {
             }
             it("sets the y") {
                 expect(rect.y) == "15"
+            }
+            it("sets the stroke") {
+                expect(rect.stroke) == "purple"
+            }
+            it("sets the fill") {
+                expect(rect.fill) == "none"
+            }
+            it("stroke-width") {
+                expect(rect.strokeWidth) == "2cm"
             }
         }
     }

@@ -44,5 +44,14 @@ final class ParserSpec: QuickSpec {
                 expect(first.children.count) == 2
             }
         }
+        context("parsing with transforms") {
+            let filePath = Bundle(for: type(of: self)).path(forResource: "rect02", ofType: "svg")!
+            let parser = Parser(file: "file://\(filePath)")
+            let document = parser.parse()!
+
+            it("3 children") {
+                expect(document.children.count) == 3
+            }
+        }
     }
 }

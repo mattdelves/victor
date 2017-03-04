@@ -17,7 +17,8 @@ final class GroupSpec: QuickSpec {
             let group = Group(
                 attributes: [
                     "id": "Something",
-                    "fill": "red"
+                    "fill": "red",
+                    "transform": "translate(700 210) rotate(-30)"
                 ],
                 children: [],
                 name: "g",
@@ -28,6 +29,9 @@ final class GroupSpec: QuickSpec {
             }
             it("sets the fill") {
                 expect(group.fill) == "red"
+            }
+            it("sets the transform") {
+                expect(group.transform) == "translate(700 210) rotate(-30)"
             }
         }
     }

@@ -26,6 +26,7 @@
 		C95FA1641E6A634D005ED369 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1631E6A634D005ED369 /* Group.swift */; };
 		C95FA1661E6A63AC005ED369 /* group.svg in Resources */ = {isa = PBXBuildFile; fileRef = C95FA1651E6A63AC005ED369 /* group.svg */; };
 		C95FA1681E6A6A59005ED369 /* GroupSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1671E6A6A59005ED369 /* GroupSpec.swift */; };
+		C95FA16A1E6A6CF5005ED369 /* rect02.svg in Resources */ = {isa = PBXBuildFile; fileRef = C95FA1691E6A6CF5005ED369 /* rect02.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		C95FA1631E6A634D005ED369 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		C95FA1651E6A63AC005ED369 /* group.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = group.svg; path = fixtures/group.svg; sourceTree = SOURCE_ROOT; };
 		C95FA1671E6A6A59005ED369 /* GroupSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSpec.swift; sourceTree = "<group>"; };
+		C95FA1691E6A6CF5005ED369 /* rect02.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = rect02.svg; path = fixtures/rect02.svg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		C95FA1521E6A49CD005ED369 /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				C95FA1691E6A6CF5005ED369 /* rect02.svg */,
 				C95FA1651E6A63AC005ED369 /* group.svg */,
 				C95FA1531E6A49F5005ED369 /* simple_rect.svg */,
 			);
@@ -268,6 +271,7 @@
 			files = (
 				C95FA1661E6A63AC005ED369 /* group.svg in Resources */,
 				C95FA1541E6A49F5005ED369 /* simple_rect.svg in Resources */,
+				C95FA16A1E6A6CF5005ED369 /* rect02.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

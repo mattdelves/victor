@@ -17,10 +17,12 @@ public class Group: Node {
     public enum Attributes: String {
         case id
         case fill
+        case transform
     }
 
-    public var id: String
-    public var fill: String
+    public var id: String = ""
+    public var fill: String = ""
+    public var transform: String = ""
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes
@@ -30,14 +32,14 @@ public class Group: Node {
 
         if let id = attributes[Attributes.id.rawValue] {
             self.id = id
-        } else {
-            self.id = ""
         }
 
         if let fill = attributes[Attributes.fill.rawValue] {
             self.fill = fill
-        } else {
-            self.fill = ""
+        }
+
+        if let transform = attributes[Attributes.transform.rawValue] {
+            self.transform = transform
         }
     }
 }

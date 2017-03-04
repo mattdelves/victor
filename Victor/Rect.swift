@@ -14,16 +14,22 @@ public class Rect: Node {
     public var children: [Node]
     public var parent: Node?
 
-    public var width: String
-    public var height: String
-    public var x: String
-    public var y: String
+    public var width: String = ""
+    public var height: String = ""
+    public var x: String = ""
+    public var y: String = ""
+    public var stroke: String = ""
+    public var strokeWidth: String = ""
+    public var fill: String = ""
 
     public enum Attributes: String {
         case width
         case height
         case x
         case y
+        case fill
+        case stroke
+        case strokeWidth = "stroke-width"
     }
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
@@ -34,26 +40,30 @@ public class Rect: Node {
 
         if let width = attributes[Attributes.width.rawValue] {
             self.width = width
-        } else {
-            self.width = ""
         }
 
         if let height = attributes[Attributes.height.rawValue] {
             self.height = height
-        } else {
-            self.height = ""
         }
 
         if let x = attributes[Attributes.x.rawValue] {
             self.x = x
-        } else {
-            self.x = ""
         }
 
         if let y = attributes[Attributes.y.rawValue] {
             self.y = y
-        } else {
-            self.y = ""
+        }
+
+        if let stroke = attributes[Attributes.stroke.rawValue] {
+            self.stroke = stroke
+        }
+
+        if let strokeWidth = attributes[Attributes.strokeWidth.rawValue] {
+            self.strokeWidth = strokeWidth
+        }
+
+        if let fill = attributes[Attributes.fill.rawValue] {
+            self.fill = fill
         }
     }
 }
