@@ -19,6 +19,7 @@
 		C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1501E6A48EA005ED369 /* SVG.swift */; };
 		C95FA1541E6A49F5005ED369 /* simple_rect.svg in Resources */ = {isa = PBXBuildFile; fileRef = C95FA1531E6A49F5005ED369 /* simple_rect.svg */; };
 		C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */; };
+		C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15B1E6A51A8005ED369 /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		C95FA1501E6A48EA005ED369 /* SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVG.swift; sourceTree = "<group>"; };
 		C95FA1531E6A49F5005ED369 /* simple_rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = simple_rect.svg; path = fixtures/simple_rect.svg; sourceTree = SOURCE_ROOT; };
 		C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserDelegate.swift; sourceTree = "<group>"; };
+		C95FA15B1E6A51A8005ED369 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				C95FA14C1E6A4799005ED369 /* Parser.swift */,
 				C95FA1501E6A48EA005ED369 /* SVG.swift */,
 				C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */,
+				C95FA15B1E6A51A8005ED369 /* Node.swift */,
 			);
 			path = Victor;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */,
 				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
 				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
+				C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +487,7 @@
 				C95FA13E1E6A41E1005ED369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C95FA13F1E6A41E1005ED369 /* Build configuration list for PBXNativeTarget "VictorTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				C95FA1411E6A41E1005ED369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

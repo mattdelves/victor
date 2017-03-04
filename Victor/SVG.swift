@@ -8,6 +8,8 @@
 
 import Foundation
 
-public struct SVG {
-    
+public struct SVG: Node {
+    public var attributes: [String : String]
+    public var children: [Node]
+    public var name: String
 }

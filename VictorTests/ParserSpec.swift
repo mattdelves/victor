@@ -14,7 +14,17 @@ import Nimble
 final class ParserSpec: QuickSpec {
     override func spec() {
         describe("file") {
-            
+            it("preparation") {
+                let parser = Parser(file: "hithere")
+                expect(parser.location) == "hithere"
+            }
+        }
+        context("parsing") {
+            it("returns SVG document") {
+                let filePath = Bundle(for: type(of: self)).path(forResource: "simple_rect", ofType: "svg")!
+                let parser = Parser(file: "file://\(filePath)")
+                expect(parser.parse()).notTo(beNil())
+            }
         }
     }
 }
