@@ -30,5 +30,19 @@ final class ParserSpec: QuickSpec {
                 expect(parser.parse()?.children.count) == 5
             }
         }
+        context("parsing groups") {
+            let filePath = Bundle(for: type(of: self)).path(forResource: "group", ofType: "svg")!
+            let parser = Parser(file: "file://\(filePath)")
+            let document = parser.parse()!
+            let groups = document.children.filter { $0 is Group }
+
+            it("has 2 groups") {
+                expect(groups.count) == 2
+            }
+            it("groups have rects") {
+                let first = groups.first as! Group
+                expect(first.children.count) == 2
+            }
+        }
     }
 }

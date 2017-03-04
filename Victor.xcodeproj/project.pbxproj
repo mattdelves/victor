@@ -22,6 +22,9 @@
 		C95FA15E1E6A5AA0005ED369 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15D1E6A5AA0005ED369 /* Rect.swift */; };
 		C95FA1601E6A5E48005ED369 /* SVGSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA15F1E6A5E48005ED369 /* SVGSpec.swift */; };
 		C95FA1621E6A5F48005ED369 /* RectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1611E6A5F48005ED369 /* RectSpec.swift */; };
+		C95FA1641E6A634D005ED369 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1631E6A634D005ED369 /* Group.swift */; };
+		C95FA1661E6A63AC005ED369 /* group.svg in Resources */ = {isa = PBXBuildFile; fileRef = C95FA1651E6A63AC005ED369 /* group.svg */; };
+		C95FA1681E6A6A59005ED369 /* GroupSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1671E6A6A59005ED369 /* GroupSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		C95FA15D1E6A5AA0005ED369 /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
 		C95FA15F1E6A5E48005ED369 /* SVGSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGSpec.swift; sourceTree = "<group>"; };
 		C95FA1611E6A5F48005ED369 /* RectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectSpec.swift; sourceTree = "<group>"; };
+		C95FA1631E6A634D005ED369 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		C95FA1651E6A63AC005ED369 /* group.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = group.svg; path = fixtures/group.svg; sourceTree = SOURCE_ROOT; };
+		C95FA1671E6A6A59005ED369 /* GroupSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */,
 				C95FA15B1E6A51A8005ED369 /* Node.swift */,
 				C95FA15D1E6A5AA0005ED369 /* Rect.swift */,
+				C95FA1631E6A634D005ED369 /* Group.swift */,
 			);
 			path = Victor;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 				C95FA14E1E6A47D3005ED369 /* ParserSpec.swift */,
 				C95FA15F1E6A5E48005ED369 /* SVGSpec.swift */,
 				C95FA1611E6A5F48005ED369 /* RectSpec.swift */,
+				C95FA1671E6A6A59005ED369 /* GroupSpec.swift */,
 			);
 			path = VictorTests;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 		C95FA1521E6A49CD005ED369 /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				C95FA1651E6A63AC005ED369 /* group.svg */,
 				C95FA1531E6A49F5005ED369 /* simple_rect.svg */,
 			);
 			name = fixtures;
@@ -254,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95FA1661E6A63AC005ED369 /* group.svg in Resources */,
 				C95FA1541E6A49F5005ED369 /* simple_rect.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +278,7 @@
 				C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */,
 				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
 				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
+				C95FA1641E6A634D005ED369 /* Group.swift in Sources */,
 				C95FA15E1E6A5AA0005ED369 /* Rect.swift in Sources */,
 				C95FA15C1E6A51A8005ED369 /* Node.swift in Sources */,
 			);
@@ -279,6 +290,7 @@
 			files = (
 				C95FA1621E6A5F48005ED369 /* RectSpec.swift in Sources */,
 				C95FA14F1E6A47D3005ED369 /* ParserSpec.swift in Sources */,
+				C95FA1681E6A6A59005ED369 /* GroupSpec.swift in Sources */,
 				C95FA1601E6A5E48005ED369 /* SVGSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

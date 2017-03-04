@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Rect: Node {
+public class Rect: Node {
     public var name: String
     public var attributes: [String : String]
     public var children: [Node]

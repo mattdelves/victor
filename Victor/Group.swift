@@ -1,5 +1,5 @@
 //
-//  SVG.swift
+//  Group.swift
 //  Victor
 //
 //  Created by Matthew Delves on 4/3/17.
@@ -8,19 +8,19 @@
 
 import Foundation
 
-public class SVG: Node {
+public class Group: Node {
     public var attributes: [String : String]
     public var children: [Node]
     public var name: String
     public var parent: Node?
 
-    public var width: String
-    public var height: String
-
     public enum Attributes: String {
-        case width
-        case height
+        case id
+        case fill
     }
+
+    public var id: String
+    public var fill: String
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes
@@ -28,16 +28,16 @@ public class SVG: Node {
         self.name = name
         self.parent = parent
 
-        if let width = attributes[Attributes.width.rawValue] {
-            self.width = width
+        if let id = attributes[Attributes.id.rawValue] {
+            self.id = id
         } else {
-            self.width = ""
+            self.id = ""
         }
 
-        if let height = attributes[Attributes.height.rawValue] {
-            self.height = height
+        if let fill = attributes[Attributes.fill.rawValue] {
+            self.fill = fill
         } else {
-            self.height = ""
+            self.fill = ""
         }
     }
 }
