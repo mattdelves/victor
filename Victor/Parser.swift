@@ -12,7 +12,7 @@ public final class Parser {
     var xmlDelegate: ParserDelegate
     var location: String
 
-    init(file: String) {
+    public init(file: String) {
         xmlDelegate = ParserDelegate()
         location = file
     }
