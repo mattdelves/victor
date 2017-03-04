@@ -14,12 +14,14 @@ public class SVG: Node {
     public var name: String
     public weak var parent: Node?
 
-    public var width: String
-    public var height: String
+    public var width: String = ""
+    public var height: String = ""
+    public var viewBox: String = ""
 
     public enum Attributes: String {
         case width
         case height
+        case viewBox
     }
 
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
@@ -30,14 +32,14 @@ public class SVG: Node {
 
         if let width = attributes[Attributes.width.rawValue] {
             self.width = width
-        } else {
-            self.width = ""
         }
 
         if let height = attributes[Attributes.height.rawValue] {
             self.height = height
-        } else {
-            self.height = ""
+        }
+
+        if let viewBox = attributes[Attributes.viewBox.rawValue] {
+            self.viewBox = viewBox
         }
     }
 }

@@ -17,7 +17,8 @@ final class SVGSpec: QuickSpec {
             let document = SVG(
                 attributes: [
                     "width": "2cm",
-                    "height": "5cm"
+                    "height": "5cm",
+                    "viewBox": "0 0 100 200"
                 ],
                 children: [],
                 name: "svg",
@@ -28,6 +29,9 @@ final class SVGSpec: QuickSpec {
             }
             it("sets the height") {
                 expect(document.height) == "5cm"
+            }
+            it("sets the viewBox") {
+                expect(document.viewBox) == "0 0 100 200"
             }
         }
     }
