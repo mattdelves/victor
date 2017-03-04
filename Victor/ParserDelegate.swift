@@ -26,9 +26,10 @@ final public class ParserDelegate: NSObject, XMLParserDelegate {
     }
 
     public func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        // start
-        switch elementName {
-        case "svg":
+        guard let type = NodeType(rawValue: elementName) else { return }
+
+        switch type {
+        case .svg:
             rootNode = SVG(attributes: attributeDict, children: [], name: elementName)
         default:
             break

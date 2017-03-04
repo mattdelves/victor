@@ -13,3 +13,8 @@ public protocol Node {
     var attributes: [String: String] { get set }
     var children: [Node] { get set }
 }
+
+public enum NodeType: String {
+    case svg
+    case rect
+}
