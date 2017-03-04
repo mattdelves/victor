@@ -27,6 +27,41 @@ extension String {
         }
     }
 
+    var pointValue: CGPoint? {
+        get {
+            let trimmed = trimmingCharacters(in: CharacterSet.uppercaseLetters)
+            let components = trimmed.components(separatedBy: ",")
+            return CGPoint(x: components.first?.doubleValue ?? 0, y: components[1].doubleValue ?? 0)
+        }
+    }
+
+    var bezierPathValue: UIBezierPath {
+        get {
+            var path = UIBezierPath()
+            var commands = components(separatedBy: " ")
+            repeat {
+                if let index = commands.first?.startIndex {
+                switch commands.first?[index] ?? Character("") {
+                case Character("M"):
+                    let move = commands.removeFirst()
+                    path.move(to: move.pointValue!)
+                case Character("L"):
+                    let line = commands.removeFirst()
+                    path.addLine(to: line.pointValue!)
+                case Character("C"):
+                    let curve = commands[0...2]
+                    let points = curve.flatMap({$0.pointValue})
+                    path.addCurve(to: points[0], controlPoint1: points[1], controlPoint2: points[2])
+                    commands.removeFirst(3)
+                default:
+                    _ = commands.removeFirst()
+                    }
+                }
+            } while (commands.count > 0)
+            return path
+        }
+    }
+
     var pointsValue: Double? {
         if self.hasSuffix("cm") {
             if let magnitude = self.substring(to: self.index(self.endIndex, offsetBy: -2)).doubleValue {
@@ -56,6 +91,18 @@ extension String {
         case "green":
             return .green
         default:
+            if hasPrefix("#"), characters.count == 7 {
+                let rgb = self[self.index(startIndex, offsetBy: 1)...self.index(startIndex, offsetBy: 6)]
+                var rgbValue: UInt32 = 0
+                Scanner(string: rgb).scanHexInt32(&rgbValue)
+
+                return UIColor(
+                    red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                    green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                    blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                    alpha: CGFloat(1.0)
+                )
+            }
             return nil
         }
     }
@@ -119,8 +166,13 @@ public final class Renderer {
     }
 
     private func render(element: Node) {
-        if let rect = element as? Rect { render(element: rect) }
-        else if let group = element as? Group { render(element: group) } else {
+        if let rect = element as? Rect {
+            render(element: rect)
+        } else if let group = element as? Group {
+            render(element: group)
+        } else if let path = element as? Path {
+            render(element: path)
+        } else {
             element.children.forEach({render(element: $0)})
         }
     }
@@ -130,5 +182,19 @@ public final class Renderer {
         context?.concatenate(transform)
         element.children.forEach({render(element: $0)})
         context?.concatenate(.identity)
+    }
+
+    private func render(element: Polygon) {
+
+    }
+
+    private func render(element: Path) {
+        let data = element.data
+        let path = data.bezierPathValue
+        (element.stroke.colorValue ?? .clear).setStroke()
+        (element.fill.colorValue ?? .clear).setFill()
+        path.stroke()
+        path.fill()
+        path.usesEvenOddFillRule = (element.fillRule == "evenodde" ? true : false)
     }
 }
