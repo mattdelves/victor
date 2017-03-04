@@ -31,6 +31,8 @@
 		C95FA1701E6A8B8D005ED369 /* PathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA16F1E6A8B8D005ED369 /* PathSpec.swift */; };
 		C95FA1721E6A8DCE005ED369 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1711E6A8DCE005ED369 /* Polygon.swift */; };
 		C95FA1741E6A8F5B005ED369 /* PolygonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1731E6A8F5B005ED369 /* PolygonSpec.swift */; };
+		C95FA1761E6A9097005ED369 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1751E6A9097005ED369 /* Mask.swift */; };
+		C95FA1781E6A9154005ED369 /* MaskSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1771E6A9154005ED369 /* MaskSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		C95FA16F1E6A8B8D005ED369 /* PathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathSpec.swift; sourceTree = "<group>"; };
 		C95FA1711E6A8DCE005ED369 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		C95FA1731E6A8F5B005ED369 /* PolygonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonSpec.swift; sourceTree = "<group>"; };
+		C95FA1751E6A9097005ED369 /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		C95FA1771E6A9154005ED369 /* MaskSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 				C95FA1631E6A634D005ED369 /* Group.swift */,
 				C95FA16D1E6A88E6005ED369 /* Path.swift */,
 				C95FA1711E6A8DCE005ED369 /* Polygon.swift */,
+				C95FA1751E6A9097005ED369 /* Mask.swift */,
 			);
 			path = Victor;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				C95FA1671E6A6A59005ED369 /* GroupSpec.swift */,
 				C95FA16F1E6A8B8D005ED369 /* PathSpec.swift */,
 				C95FA1731E6A8F5B005ED369 /* PolygonSpec.swift */,
+				C95FA1771E6A9154005ED369 /* MaskSpec.swift */,
 			);
 			path = VictorTests;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			files = (
 				C95FA1721E6A8DCE005ED369 /* Polygon.swift in Sources */,
 				C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */,
+				C95FA1761E6A9097005ED369 /* Mask.swift in Sources */,
 				C95FA16E1E6A88E6005ED369 /* Path.swift in Sources */,
 				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
 				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
@@ -313,6 +320,7 @@
 				C95FA1621E6A5F48005ED369 /* RectSpec.swift in Sources */,
 				C95FA1741E6A8F5B005ED369 /* PolygonSpec.swift in Sources */,
 				C95FA14F1E6A47D3005ED369 /* ParserSpec.swift in Sources */,
+				C95FA1781E6A9154005ED369 /* MaskSpec.swift in Sources */,
 				C95FA1701E6A8B8D005ED369 /* PathSpec.swift in Sources */,
 				C95FA1681E6A6A59005ED369 /* GroupSpec.swift in Sources */,
 				C95FA1601E6A5E48005ED369 /* SVGSpec.swift in Sources */,
