@@ -41,6 +41,8 @@ final public class ParserDelegate: NSObject, XMLParserDelegate {
             newNode = Rect(attributes: attributeDict, children: [], name: elementName, parent: parent)
         case .path:
             newNode = Path(attributes: attributeDict, children: [], name: elementName, parent: parent)
+        case .polygon:
+            newNode = Polygon(attributes: attributeDict, children: [], name: elementName, parent: parent)
         }
 
         if let node = newNode {

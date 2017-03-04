@@ -20,4 +20,5 @@ public enum NodeType: String {
     case rect
     case group = "g"
     case path
+    case polygon
 }
