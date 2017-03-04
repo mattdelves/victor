@@ -1,0 +1,8 @@
+*/timeline.xctimeline
+**/*/xcuserdata
+**/*/xcshareddata
+DerivedData
+.DS_Store
+logs/*
+Package.itmsp/*
+Carthage/Build

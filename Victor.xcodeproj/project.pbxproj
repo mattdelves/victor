@@ -10,6 +10,10 @@
 		C95FA1321E6A41E1005ED369 /* Victor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1281E6A41E1005ED369 /* Victor.framework */; };
 		C95FA1371E6A41E1005ED369 /* VictorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1361E6A41E1005ED369 /* VictorTests.swift */; };
 		C95FA1391E6A41E1005ED369 /* Victor.h in Headers */ = {isa = PBXBuildFile; fileRef = C95FA12B1E6A41E1005ED369 /* Victor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C95FA1471E6A4586005ED369 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1431E6A457C005ED369 /* Nimble.framework */; };
+		C95FA1481E6A4586005ED369 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1441E6A457C005ED369 /* Quick.framework */; };
+		C95FA14A1E6A45FA005ED369 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C95FA1431E6A457C005ED369 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C95FA14B1E6A45FA005ED369 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C95FA1441E6A457C005ED369 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +26,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C95FA1491E6A45F0005ED369 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C95FA14A1E6A45FA005ED369 /* Nimble.framework in CopyFiles */,
+				C95FA14B1E6A45FA005ED369 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C95FA1281E6A41E1005ED369 /* Victor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Victor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FA12B1E6A41E1005ED369 /* Victor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Victor.h; sourceTree = "<group>"; };
@@ -29,6 +47,8 @@
 		C95FA1311E6A41E1005ED369 /* VictorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VictorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FA1361E6A41E1005ED369 /* VictorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictorTests.swift; sourceTree = "<group>"; };
 		C95FA1381E6A41E1005ED369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C95FA1431E6A457C005ED369 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		C95FA1441E6A457C005ED369 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +64,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C95FA1321E6A41E1005ED369 /* Victor.framework in Frameworks */,
+				C95FA1471E6A4586005ED369 /* Nimble.framework in Frameworks */,
+				C95FA1481E6A4586005ED369 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +78,7 @@
 				C95FA12A1E6A41E1005ED369 /* Victor */,
 				C95FA1351E6A41E1005ED369 /* VictorTests */,
 				C95FA1291E6A41E1005ED369 /* Products */,
+				C95FA1421E6A4561005ED369 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +107,15 @@
 				C95FA1381E6A41E1005ED369 /* Info.plist */,
 			);
 			path = VictorTests;
+			sourceTree = "<group>";
+		};
+		C95FA1421E6A4561005ED369 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C95FA1431E6A457C005ED369 /* Nimble.framework */,
+				C95FA1441E6A457C005ED369 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +157,7 @@
 				C95FA12D1E6A41E1005ED369 /* Sources */,
 				C95FA12E1E6A41E1005ED369 /* Frameworks */,
 				C95FA12F1E6A41E1005ED369 /* Resources */,
+				C95FA1491E6A45F0005ED369 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -328,6 +361,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Victor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -347,6 +384,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Victor/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -361,6 +402,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 74D9UBS5CF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VictorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reformedsoftware.VictorTests;
@@ -373,6 +418,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 74D9UBS5CF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VictorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reformedsoftware.VictorTests;
