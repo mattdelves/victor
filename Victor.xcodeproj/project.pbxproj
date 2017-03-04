@@ -14,6 +14,11 @@
 		C95FA1481E6A4586005ED369 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1441E6A457C005ED369 /* Quick.framework */; };
 		C95FA14A1E6A45FA005ED369 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C95FA1431E6A457C005ED369 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C95FA14B1E6A45FA005ED369 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C95FA1441E6A457C005ED369 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA14C1E6A4799005ED369 /* Parser.swift */; };
+		C95FA14F1E6A47D3005ED369 /* ParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA14E1E6A47D3005ED369 /* ParserSpec.swift */; };
+		C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1501E6A48EA005ED369 /* SVG.swift */; };
+		C95FA1541E6A49F5005ED369 /* simple_rect.svg in Resources */ = {isa = PBXBuildFile; fileRef = C95FA1531E6A49F5005ED369 /* simple_rect.svg */; };
+		C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		C95FA1381E6A41E1005ED369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C95FA1431E6A457C005ED369 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C95FA1441E6A457C005ED369 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		C95FA14C1E6A4799005ED369 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		C95FA14E1E6A47D3005ED369 /* ParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserSpec.swift; sourceTree = "<group>"; };
+		C95FA1501E6A48EA005ED369 /* SVG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVG.swift; sourceTree = "<group>"; };
+		C95FA1531E6A49F5005ED369 /* simple_rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = simple_rect.svg; path = fixtures/simple_rect.svg; sourceTree = SOURCE_ROOT; };
+		C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,9 @@
 			children = (
 				C95FA12B1E6A41E1005ED369 /* Victor.h */,
 				C95FA12C1E6A41E1005ED369 /* Info.plist */,
+				C95FA14C1E6A4799005ED369 /* Parser.swift */,
+				C95FA1501E6A48EA005ED369 /* SVG.swift */,
+				C95FA1551E6A4B26005ED369 /* ParserDelegate.swift */,
 			);
 			path = Victor;
 			sourceTree = "<group>";
@@ -103,8 +116,10 @@
 		C95FA1351E6A41E1005ED369 /* VictorTests */ = {
 			isa = PBXGroup;
 			children = (
+				C95FA1521E6A49CD005ED369 /* fixtures */,
 				C95FA1361E6A41E1005ED369 /* VictorTests.swift */,
 				C95FA1381E6A41E1005ED369 /* Info.plist */,
+				C95FA14E1E6A47D3005ED369 /* ParserSpec.swift */,
 			);
 			path = VictorTests;
 			sourceTree = "<group>";
@@ -116,6 +131,14 @@
 				C95FA1441E6A457C005ED369 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C95FA1521E6A49CD005ED369 /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				C95FA1531E6A49F5005ED369 /* simple_rect.svg */,
+			);
+			name = fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +205,7 @@
 					C95FA1271E6A41E1005ED369 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 74D9UBS5CF;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					C95FA1301E6A41E1005ED369 = {
@@ -221,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95FA1541E6A49F5005ED369 /* simple_rect.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95FA1511E6A48EA005ED369 /* SVG.swift in Sources */,
+				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
+				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C95FA1371E6A41E1005ED369 /* VictorTests.swift in Sources */,
+				C95FA14F1E6A47D3005ED369 /* ParserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +384,7 @@
 		C95FA13D1E6A41E1005ED369 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 74D9UBS5CF;
@@ -371,6 +401,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.reformedsoftware.Victor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -378,6 +409,7 @@
 		C95FA13E1E6A41E1005ED369 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 74D9UBS5CF;
@@ -401,6 +433,7 @@
 		C95FA1401E6A41E1005ED369 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 74D9UBS5CF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,6 +450,7 @@
 		C95FA1411E6A41E1005ED369 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 74D9UBS5CF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
