@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141615491E6A6D0F008230C3 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141615481E6A6D0F008230C3 /* Renderer.swift */; };
 		C95FA1321E6A41E1005ED369 /* Victor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1281E6A41E1005ED369 /* Victor.framework */; };
 		C95FA1391E6A41E1005ED369 /* Victor.h in Headers */ = {isa = PBXBuildFile; fileRef = C95FA12B1E6A41E1005ED369 /* Victor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C95FA1471E6A4586005ED369 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95FA1431E6A457C005ED369 /* Nimble.framework */; };
@@ -61,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		141615481E6A6D0F008230C3 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		C95FA1281E6A41E1005ED369 /* Victor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Victor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95FA12B1E6A41E1005ED369 /* Victor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Victor.h; sourceTree = "<group>"; };
 		C95FA12C1E6A41E1005ED369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		C95FA12A1E6A41E1005ED369 /* Victor */ = {
 			isa = PBXGroup;
 			children = (
+				141615481E6A6D0F008230C3 /* Renderer.swift */,
 				C95FA12B1E6A41E1005ED369 /* Victor.h */,
 				C95FA12C1E6A41E1005ED369 /* Info.plist */,
 				C95FA14C1E6A4799005ED369 /* Parser.swift */,
@@ -309,6 +312,7 @@
 				C95FA1761E6A9097005ED369 /* Mask.swift in Sources */,
 				C95FA16E1E6A88E6005ED369 /* Path.swift in Sources */,
 				C95FA14D1E6A4799005ED369 /* Parser.swift in Sources */,
+				141615491E6A6D0F008230C3 /* Renderer.swift in Sources */,
 				C95FA1561E6A4B26005ED369 /* ParserDelegate.swift in Sources */,
 				C95FA1641E6A634D005ED369 /* Group.swift in Sources */,
 				C95FA17A1E6A945A005ED369 /* Defs.swift in Sources */,
