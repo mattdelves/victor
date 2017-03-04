@@ -193,6 +193,7 @@ public final class Renderer {
         let path = data.bezierPathValue
         (element.stroke.colorValue ?? .clear).setStroke()
         (element.fill.colorValue ?? .clear).setFill()
+        context?.setLineWidth(CGFloat(element.strokeWidth.doubleValue ?? 1))
         path.stroke()
         path.fill()
         path.usesEvenOddFillRule = (element.fillRule == "evenodde" ? true : false)
