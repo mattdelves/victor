@@ -19,31 +19,38 @@ public struct Rect: Node {
     public var x: String
     public var y: String
 
+    public enum Attributes: String {
+        case width
+        case height
+        case x
+        case y
+    }
+
     public init(attributes: [String: String], children: [Node], name: String, parent: Node?) {
         self.attributes = attributes
         self.children = children
         self.name = name
         self.parent = parent
 
-        if let width = attributes["width"] {
+        if let width = attributes[Attributes.width.rawValue] {
             self.width = width
         } else {
             self.width = ""
         }
 
-        if let height = attributes["height"] {
+        if let height = attributes[Attributes.height.rawValue] {
             self.height = height
         } else {
             self.height = ""
         }
 
-        if let x = attributes["x"] {
+        if let x = attributes[Attributes.x.rawValue] {
             self.x = x
         } else {
             self.x = ""
         }
 
-        if let y = attributes["y"] {
+        if let y = attributes[Attributes.y.rawValue] {
             self.y = y
         } else {
             self.y = ""
